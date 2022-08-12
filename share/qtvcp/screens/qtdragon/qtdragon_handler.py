@@ -431,11 +431,11 @@ class HandlerClass:
     def spindle_pwr_changed(self, data):
         # this calculation assumes the voltage is line to neutral
         # and that the synchronous motor spindle has a power factor of 0.9
-        power = self.h['spindle-volts'] * self.h['spindle-amps'] * 2.7 # 3 x V x I x PF
-        amps = "{:1.1f}".format(self.h['spindle-amps'])
-        pwr = "{:1.1f}".format(power)
+        #power = self.h['spindle-volts'] * self.h['spindle-amps'] * 2.7 * 0.001 # 3 x V x I x PF
+        amps = "{:1.1f}".format(self.h['spindle-amps'] * 0.001)
+        voltage = "{:1.1f}".format(self.h['spindle-volts'])
         self.w.lbl_spindle_amps.setText(amps)
-        self.w.lbl_spindle_power.setText(pwr)
+        self.w.lbl_spindle_power.setText(voltage)
 
     def spindle_fault_changed(self, data):
         fault = hex(self.h['spindle-fault'])

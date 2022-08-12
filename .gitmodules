@@ -1,0 +1,3 @@
+[submodule "configs/Diferenciarte"]
+	path = configs/Diferenciarte
+	url = git@github.com:delissonjunio/linuxcnc-diferenciarte.git

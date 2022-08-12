@@ -14457,6 +14457,71 @@ ZERO</string>
                  </property>
                 </widget>
                </item>
+               <item row="1" column="0" colspan="2">
+                <widget class="StatusLabel" name="status_rpm">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>60</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="toolTip">
+                  <string>Current spindle RPM</string>
+                 </property>
+                 <property name="frameShape">
+                  <enum>QFrame::WinPanel</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Sunken</enum>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                 <property name="textTemplate" stdset="0">
+                  <string>%d</string>
+                 </property>
+                 <property name="actual_spindle_speed_status" stdset="0">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0" colspan="2">
+                <widget class="QLabel" name="label_18">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>24</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>24</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>SPINDLE RPM</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                 <property name="pin_name" stdset="0">
+                  <string>ui-spindle-rpm</string>
+                  </property>
+                </widget>
+               </item>
                <item row="0" column="2">
                 <widget class="QLabel" name="label_25">
                  <property name="text">
@@ -14606,7 +14671,7 @@ ZERO</string>
                   </size>
                  </property>
                  <property name="text">
-                  <string>POWER</string>
+                  <string>VOLTAGE</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
@@ -14634,7 +14699,7 @@ ZERO</string>
                   </size>
                  </property>
                  <property name="toolTip">
-                  <string>Spindle power</string>
+                  <string>Spindle voltage</string>
                  </property>
                  <property name="text">
                   <string>000</string>
